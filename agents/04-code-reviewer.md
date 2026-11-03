@@ -4,15 +4,15 @@ Sur le diff, corrige chaque bloquant, puis termine. Cite au plus trois points im
 
 ## Bloquants
 
-- Comportement demandé absent, y compris un loading, un empty ou une error prévus.
-- `any`, `as any` ou `@ts-ignore`.
-- Donnée externe entrée dans l'état sans Zod.
+- Comportement demandé absent, y compris un chargement, un vide ou une erreur prévus.
+- Échappatoire de type (`any`, `as any`, `@ts-ignore`, ou l'équivalent du langage).
+- Donnée externe entrée sans validation.
 - Effet sans nettoyage.
 - Même donnée détenue à deux endroits.
-- Contrôle inaccessible au clavier.
-- `"use client"` sans état, effet, événement ou animation.
+- Contrôle inaccessible sur la plateforme du projet.
+- Second système d'état, de style, de routing ou de persistance.
 - Changement hors du périmètre demandé.
 
 ## Importants
 
-Hook aux dépendances fausses, store sélectionné en bloc, re-render coûteux sur une liste longue. Les citer sans les traiter comme des bloquants.
+Dépendances d'effet fausses, lecture trop large d'un état partagé, rendu coûteux sur une longue liste. Les citer sans les traiter comme des bloquants.
